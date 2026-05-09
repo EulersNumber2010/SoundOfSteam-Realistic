@@ -271,6 +271,22 @@ public class AllBlocks {
             Piccolo.PiccoloExtensionBlock::new,
             () -> Blocks.IRON_BLOCK,
             BlockTags.MINEABLE_WITH_PICKAXE);
+    
+    /*
+    public static final BlockEntry<Oktav.OktavBlock> OKTAV = registerPipeBlock(
+            "oktav",
+            Oktav.OktavBlock::new,
+            () -> Blocks.IRON_BLOCK,
+            StopSize.TWO,
+            BlockTags.MINEABLE_WITH_PICKAXE);
+
+
+    public static final BlockEntry<Oktav.OktavExtensionBlock> OKTAV_EXTENSION = registerExtensionBlock(
+            "oktav_extension",
+            Oktav.OktavExtensionBlock::new,
+            () -> Blocks.IRON_BLOCK,
+            BlockTags.MINEABLE_WITH_PICKAXE);
+     */
 
     public static final BlockEntry<Posaune.PosauneBlock> POSAUNE = registerPipeBlock(
             "posaune",
@@ -313,7 +329,8 @@ public class AllBlocks {
             Subbass.SubbassExtensionBlock::new,
             () -> Blocks.DARK_OAK_PLANKS,
             BlockTags.MINEABLE_WITH_AXE);
-
+    
+    /*
     public static final BlockEntry<Untersatz.UntersatzBlock> UNTERSATZ = registerPipeBlock(
             "untersatz",
             Untersatz.UntersatzBlock::new,
@@ -321,12 +338,12 @@ public class AllBlocks {
             StopSize.THIRTYTWO,
             BlockTags.MINEABLE_WITH_AXE);
 
-
     public static final BlockEntry<Untersatz.UntersatzExtensionBlock> UNTERSATZ_EXTENSION = registerExtensionBlock(
             "untersatz_extension",
             Untersatz.UntersatzExtensionBlock::new,
             () -> Blocks.DARK_OAK_PLANKS,
             BlockTags.MINEABLE_WITH_AXE);
+     */
 
     public static final BlockEntry<OpenWood.OpenWoodBlock> OPEN_WOOD = registerPipeBlock(
             "open_wood",

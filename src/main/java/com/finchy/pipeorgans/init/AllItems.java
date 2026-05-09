@@ -31,6 +31,10 @@ public class AllItems {
                     .item("copper_boot", Item::new)
                     .onRegisterAfter(Registries.ITEM, v -> ItemDescription.useKey(v, "item.pipeorgans.copper_boot"))
                     .register(),
+            REINFORCED_COPPER_BOOT = REGISTRATE
+                    .item("reinforced_copper_boot", Item::new)
+                    .onRegisterAfter(Registries.ITEM, v -> ItemDescription.useKey(v, "item.pipeorgans.reinforced_copper_boot"))
+                    .register(),
             BRASSBOUND_BOOT = REGISTRATE
                     .item("brassbound_boot", Item::new)
                     .onRegisterAfter(Registries.ITEM, v -> ItemDescription.useKey(v, "item.pipeorgans.brassbound_boot"))
@@ -66,6 +70,7 @@ public class AllItems {
             INCOMPLETE_VOX_HUMANA = sequencedPipeIngredient("incomplete_vox_humana"),
             INCOMPLETE_POSAUNE = sequencedPipeIngredient("incomplete_posaune"),
             INCOMPLETE_ENGLISH_HORN = sequencedPipeIngredient("incomplete_english_horn"),
+            INCOMPLETE_KRUMMHORN = sequencedPipeIngredient("incomplete_krummhorn"),
             INCOMPLETE_BASSOON = sequencedPipeIngredient("incomplete_bassoon");
 
     private static ItemEntry<SequencedAssemblyItem> sequencedPipeIngredient(String name) {
@@ -73,7 +78,7 @@ public class AllItems {
                 .model(AssetLookup.existingItemModel())
                 .register();
     }
-//Anonym3000 doesn't like my comments
+//Anonym3000 does(n̶'̶t̶) like my comments
     public static void register() {
 
     }

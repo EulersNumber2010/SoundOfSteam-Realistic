@@ -118,7 +118,7 @@ public class PonderPipe<TS extends Enum<TS> & ExtensionShapes.IExtensionShape<TS
         PipeSize newSize = PipeSize.values()[(getSize().ordinal() + (reverse ? -1 : 1) + PipeSize.values().length) % PipeSize.values().length];
         setSize(newSize);
 
-        scene.world().modifyBlock(pos, bs -> bs.setValue(GenericPipeBlock.SIZE, newSize), false);
+        scene.world().cycleBlockProperty(pos, GenericPipeBlock.SIZE);
 
         tryBothTransitionParts(transition);
         for (int i=1; i<=getExtensionBlockHeight(); i++) {
@@ -158,7 +158,6 @@ public class PonderPipe<TS extends Enum<TS> & ExtensionShapes.IExtensionShape<TS
 
 
         } else { // if another extension can be added without placing a new block
-            PipeOrgans.LOGGER.debug("EXTENDING EXISTING");
             scene.world().modifyBlock(extensionPos, bs -> {
                 BlockState toPlace = bs.cycle(extensionBlock.SHAPE);  // cycle to the next shape
                 if (extensionBlock.isDirectional()) // only set direction if the extension is directional

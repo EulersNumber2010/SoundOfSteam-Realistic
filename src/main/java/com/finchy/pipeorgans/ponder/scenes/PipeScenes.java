@@ -54,7 +54,7 @@ public class PipeScenes {
         BlockPos windchestPipePos = util.grid().at(3, 2, 2);
         PonderPipe<ExtensionShapes.Double> windchestPipe = new PonderPipe<>(
                 scene, util,
-                boilerPipePos, PipeSize.MEDIUM, Direction.NORTH, false, false,
+                windchestPipePos, PipeSize.MEDIUM, Direction.NORTH, false, false,
                 0,
                 AllBlocks.DIAPASON.get(), AllBlocks.DIAPASON_EXTENSION.get(),
                 PonderPipe.Transition.NONE
@@ -129,6 +129,10 @@ public class PipeScenes {
 
         scene.world().toggleRedstonePower(boilerLever); // toggle boiler lever power
         scene.world().toggleRedstonePower(boilerPipe.getMaximumPipeSelection()); // toggle boiler pipe power
+
+        scene.world().toggleRedstonePower(controllerLever); // toggle controller lever power
+        scene.world().toggleRedstonePower(windchestLever); // toggle windchest lever power
+        scene.world().toggleRedstonePower(windchestPipe.getMaximumPipeSelection()); // toggle windchest pipe power
 
         scene.idle(PonderTimings.BUILD_STEP);
         scene.world().hideSection(fan, Direction.EAST); // hide fan
@@ -224,17 +228,17 @@ public class PipeScenes {
         boilerPipe.cyclePipeSize(); // medium
         scene.idle(40);
 
-        scene.overlay().showText(80)
+        scene.overlay().showText(70)
                 .attachKeyFrame()
                 .colored(PonderPalette.BLUE)
                 .text("Engineer's Goggles can help to find out the current pitch and octave of a Pipe")
-                .pointAt(util.vector().blockSurface(util.grid().at(2, 2, 2), Direction.DOWN))
+                .pointAt(util.vector().blockSurface(util.grid().at(2, 2, 2), Direction.WEST))
                 .placeNearTarget();
         scene.idle(70);
 
-        PonderUtil.displayGoggleHint(scene, util.grid().at(2, 2, 2).getCenter(),
+        PonderUtil.displayGoggleHint(scene, util.vector().blockSurface(util.grid().at(2, 2, 2), Direction.SOUTH), 
                 "C#4", 60,
-                true, true);
+                false, true);
 
         scene.markAsFinished();
     }
@@ -248,8 +252,6 @@ public class PipeScenes {
         scene.showBasePlate();
         scene.idle(PonderTimings.BUILD_STEP);
 
-        PonderLevel level = scene.getScene().getWorld();
-
         Selection verticalBlocker = util.select().position(2, 6, 2);
         Selection horizontalBlocker = util.select().position(2, 2, 0);
         Selection boilerCampfire = util.select().fromTo(2, 1, 3, 2, 2, 3);
@@ -258,7 +260,7 @@ public class PipeScenes {
 
         Selection diapason = util.select().fromTo(2, 2, 2, 2, 4, 2);
         Selection subbass = util.select().fromTo(0, 2, 2, 0, 6, 2);
-        Selection voxHumana = util.select().fromTo(4, 2, 2, 4, 3, 2);
+        //Selection voxHumana = util.select().fromTo(4, 2, 2, 4, 3, 2);
         Selection chamade = util.select().fromTo(6, 2, 2, 6, 2, 0);
         Selection trompette = util.select().fromTo(8, 2, 2, 8, 4, 2);
 
