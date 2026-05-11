@@ -1,5 +1,5 @@
 <p align="center"><img src="icon.png" alt="Logo" width="160"></p>
-<h1 align="center">Create: Sound of Steam<br>
+<h1 align="center">Create: Sound of Steam - Realistic Edition (tm)<br>
 <a href="https://www.curseforge.com/minecraft/mc-mods/create-sound-of-steam/files"><img src="https://cf.way2muchnoise.eu/versions/1196142(c70039).svg" alt="Supported Versions"></a>
 <a href="https://github.com/FinchyMcFinch/PipeOrgans/blob/1.20.1/LICENSE.txt"><img src="https://img.shields.io/github/license/finchymcfinch/pipeorgans?style=flat&color=900c3f" alt="License"></a>
 <a href="https://discord.gg/bhxgTnZfa7"><img src="https://img.shields.io/discord/1335536388203876383?style=flat&label=Discord&color=5865f2" alt="Discord"></a>
